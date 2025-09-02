@@ -1,0 +1,222 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+        }
+        table {
+            border: 2px solid #444;
+            border-collapse: collapse;
+            margin: 20px auto;
+            border-radius: 17px;
+        }
+        th, td {
+            border: 1px solid #888;
+            padding: 10px 15px;
+            vertical-align: top;
+        }
+        th {
+            background-color: #f5f5f5;
+            text-align: left;
+            font-size: 1.1em;
+        }
+        fieldset {
+            border: 2px solid #888;
+            margin: 20px 0 10px 0;
+            padding: 10px;
+            border-radius: 15px;
+        }
+        legend {
+            font-weight: bold;
+            font-size: 1.1em;
+        }
+        input[type="submit"], input[type="reset"] {
+            padding: 8px 18px;
+            font-size: 1em;
+            margin-right: 10px;
+            border-radius: 10px;
+        }
+        .section-head {
+            background-color: #e8e8e8;
+            font-weight: bold;
+            text-align: left;
+            color: blueviolet;
+        }
+        placeholder{
+        color: red;
+        }
+    </style>
+</head>
+    <title>Registration Form</title>
+</head>
+<body style="background-color: rgb(222, 236, 231);">
+    <h2 style="text-align: center; color: blueviolet;"> Registration Form </h2>
+    <form action="#" autocomplete="on" method="post">
+
+        <Fieldset>
+<legend style="color: rgb(216, 77, 23);"> Registration Details </legend>
+<table>
+
+
+    <!-- Personal Details Section -->
+    <tr>
+        <th colspan="2" class="section-head">Personal Details</th>
+    </tr>
+    <tr>
+        <td>First Name <span style="color:rgb(172, 34, 34);">*</span></td>
+        <td>
+            <input type="text" name="firstName" placeholder="Enter your first name " required maxlength="30" title="Enter your first name">
+        </td>
+    </tr>
+    <tr>
+        <td>Last Name <span style="color:red;">*</span></td>
+        <td>
+            <input type="text" name="lastName" placeholder="please enter your last name " required maxlength="30" title="Enter your last name">
+        </td>
+    </tr>
+    <tr>
+        <td>Email <span style="color:red;">*</span></td>
+        <td>
+            <input type="email" name="email" placeholder="Please enter your email" required maxlength="60" title="Enter a valid email address">
+        </td>
+    </tr>
+    <tr>
+        <td>Phone Number</td>
+        <td>
+            <input type="tel" name="phone"
+                pattern="\d{10}" maxlength="10" placeholder="Enter your Mobile no."
+                title="Enter a 10-digit phone number">
+            <small>(10 digits only)</small>
+        </td>
+    </tr>
+    <!-- Account Details -->
+    <tr> 
+      <div style="background-color: aquamarine;"> <th colspan="2" class="section-head"> 
+             Account Details </th> </div>
+    </tr>
+    <tr>
+        <td> Username <span style="color:red">*</span></td>
+        <td> <input type="text" name="username" required
+             placeholder="Please enter valid username">
+        </td>
+    </tr>
+    <tr>
+        <td> Passward: <span style="color:red">*</span></td>
+        <td> <input type="password" name="Passward" required
+             placeholder="Please enter valid Passward"></td>
+    </tr>
+    <tr>
+        <td>Confirm Passward: <span style="color:red">*</span></td>
+        <td> <input type="password" name="Confirm Passward" required
+             placeholder="Please enter Confirm Passward"></td>
+    </tr>
+    <!-- Address Details  -->
+    <tr> 
+        <th colspan="2" class="section-head">
+             Address </th>
+    
+    </tr>
+    <tr>
+        <td>Address Line 1: <span style="color:red">*</span></td>
+        <td> <input type="text" name="Address Line 1" required
+             placeholder="Please enter Address "></td>
+    </tr>
+    <tr>
+        <td>Address Line 2: <span style="color:red">*</span></td>
+        <td> <input type="text" name="Address Line 2" required
+             placeholder="Please enter Address "></td>
+    </tr>
+    <tr>
+        <td>City: <span style="color:red">*</span></td>
+        <td> <input type="text" name="City" required
+             placeholder="Please enter your city  "></td>
+    </tr>
+    <tr>
+<td> State : <span ></span></td>
+<td> 
+
+    <Select> 
+        <option value="Select State " > Select State </option>
+        <option value="Select State " > Uttar Pradesh </option>
+        <option value="Select State " > Gujarat </option>
+        <option value="Select State " > Rajasthan</option>
+        <option value="Select State " > Delhi </option>
+        <option value="Select State " > Telangana </option>
+        <option value="Select State " > Tamilnadu</option>
+        <option value="Select State " > Kerala </option>
+        <option value="Select State " > Punjab </option>
+        <option value="Select State " > Hariyana </option>
+    </Select>
+</td>
+
+    </tr>
+    <tr>
+        <td>ZIP Code <span style="color:red">*</span></td>
+        <td> <input type="text" name="City" required
+             ></td>
+    </tr>
+    <!-- Preferences -->
+    <tr> 
+       <th colspan="2" class="section-head"> 
+               Preferences </th>
+      </tr>
+      <tr>
+        <td> Gender : <span style="color:red">*</span></td>
+       <td> 
+        <input type="radio" name="Gender"  > Male
+         <input type="radio" name="Gender"  > Female
+        <input type="radio" name="Gender"  > Other
+    </td>
+    </tr>
+    <tr>
+        <td>Subscribe to Newsletter</td>
+        <td>
+            <input type="checkbox" name="newsletter" value="yes"> Yes, send me updates!
+        </td>
+    </tr>
+<tr>
+    <td>Short Bio : <span style="color:red">*</span></td>
+    <td> 
+        <textarea name="" id="" cols="25" rows="5"></textarea>
+    </td>
+</tr>
+<tr> <td> <input type="checkbox"> I agree to the <strong>Terms and Conditions</strong> 
+     <span style="color:red">*</span></td></tr>
+     <tr>
+        <td colspan="2" style="text-align:center;">
+            <input type="submit" value="Register">
+            <input type="reset" value="Reset">
+        </td>
+    </tr>
+</table>
+
+
+        </Fieldset>
+
+    </form>
+
+    <h3 style="text-align:center;">Terms and Conditions</h3>
+    <iframe
+        srcdoc='
+        <h4>Registration Terms and Conditions</h4>
+        <ol>
+            <li>All information submitted must be truthful and accurate.</li>
+            <li>Your account cannot be shared or transferred to others.</li>
+            <li>Personal information will be used solely for registration and 
+                communication purposes.</li>
+            <li>By submitting, you consent to receive related notifications (if opted in).
+
+            </li>
+            <li>Violations of terms may lead to account suspension.</li>
+        </ol>
+        <p style="font-size:0.9em; color:red;">Please read these terms carefully
+             before submitting your registration.</p>'
+        width="80%"
+        height="170"
+        style="border:1.5px solid #888; margin:0 auto; display:block;
+         background:#976990;"
+        title="Terms and Conditions"
+        aria-label="Terms and Conditions"></iframe>
+</body>
+</html>
